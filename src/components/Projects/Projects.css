@@ -1,0 +1,387 @@
+/* ==========================================
+   PROJECTS SECTION
+========================================== */
+
+.projects {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-title p {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.projects-title h2 {
+  font-size: 48px;
+  color: var(--white);
+  font-family: var(--heading-font);
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background: linear-gradient(145deg, rgba(17, 28, 52, 0.95), rgba(10, 17, 34, 0.95));
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.35);
+
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* Glow Border */
+
+.project-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  border-radius: 22px;
+
+  padding: 1px;
+
+  background: linear-gradient(
+      135deg,
+      rgba(56,189,248,.7),
+      transparent,
+      rgba(56,189,248,.5)
+  );
+
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+  mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  opacity: 0;
+
+  transition: .4s;
+}
+
+.project-card:hover::before{
+
+  opacity:1;
+
+}
+
+.project-card:hover{
+
+  transform:translateY(-10px) scale(1.02);
+
+  box-shadow:0 25px 55px rgba(124, 58, 237, 0.2);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.project-image{
+
+  width:100%;
+
+  height:230px;
+
+  object-fit:cover;
+
+  transition:.5s;
+
+}
+
+.project-card:hover .project-image{
+
+  transform:scale(1.08);
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.project-content{
+
+  position: relative;
+  z-index: 1;
+
+  display:flex;
+
+  flex-direction:column;
+
+  flex:1;
+
+  padding:28px;
+
+}
+
+.project-content h3{
+
+  color:var(--white);
+
+  font-size:28px;
+
+  margin-bottom:15px;
+
+}
+
+.project-content p{
+
+  color:var(--gray);
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+
+  flex:1;
+
+}
+
+/* ==========================================
+   TECH BADGES
+========================================== */
+
+.tech-stack{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-bottom:30px;
+
+}
+
+.tech-badge{
+
+  background:rgba(56,189,248,.12);
+
+  border:1px solid rgba(56,189,248,.25);
+
+  color:var(--primary-color);
+
+  padding:8px 15px;
+
+  border-radius:30px;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  transition:.3s ease;
+
+}
+
+.tech-badge:hover{
+
+  background:var(--primary-color);
+
+  color:var(--bg-color);
+
+  transform:translateY(-3px) scale(1.05);
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.project-buttons{
+
+  position: relative;
+  z-index: 2;
+
+  display:flex;
+
+  gap:15px;
+
+  margin-top:auto;
+
+}
+
+.github-btn,
+.demo-btn{
+
+  flex:1;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:10px;
+
+  text-decoration:none;
+
+  padding:14px;
+
+  border-radius:12px;
+
+  font-weight:600;
+
+  transition:transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+}
+
+.github-btn{
+
+  border:2px solid var(--primary-color);
+
+  color:var(--white);
+
+  background:transparent;
+
+}
+
+.github-btn:hover{
+
+  background:var(--primary-color);
+  color:var(--bg-color);
+  transform:translateY(-3px);
+  box-shadow:0 12px 22px rgba(124, 58, 237, 0.28);
+
+}
+
+.demo-btn{
+
+  background:var(--primary-color);
+
+  color:var(--bg-color);
+
+}
+
+.demo-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:0 15px 35px rgba(34, 211, 238, 0.3);
+
+}
+
+.github-btn svg,
+.demo-btn svg{
+
+  font-size:18px;
+
+}
+/* Disabled Button */
+
+.disabled-btn {
+    background: #4b5563;
+    color: #d1d5db;
+    cursor: not-allowed;
+    opacity: 0.8;
+    border: none;
+}
+
+.disabled-btn:hover {
+    transform: none;
+    box-shadow: none;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.projects-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects{
+
+width:95%;
+
+padding:80px 0;
+
+}
+
+.projects-title h2{
+
+font-size:38px;
+
+}
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.project-image{
+
+height:220px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.project-content{
+
+padding:22px;
+
+}
+
+.project-content h3{
+
+font-size:24px;
+
+}
+
+.project-buttons{
+
+flex-direction:column;
+
+}
+
+}

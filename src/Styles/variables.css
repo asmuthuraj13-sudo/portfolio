@@ -1,0 +1,68 @@
+/* ==========================================
+   PORTFOLIO DESIGN SYSTEM
+   ========================================== */
+
+:root {
+
+    /* ================= COLORS ================= */
+
+    --bg-color: #060816;
+    --surface-color: #0f172a;
+    --card-color: #111c34;
+
+    --primary-color: #7c3aed;
+    --secondary-color: #22d3ee;
+
+    --white: #f8fafc;
+    --gray: #94a3b8;
+    --light-gray: #cbd5e1;
+
+    /* ================= TYPOGRAPHY ================= */
+
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Inter", sans-serif;
+
+    /* Font Sizes */
+
+    --fs-xl: 68px;
+    --fs-lg: 48px;
+    --fs-md: 24px;
+    --fs-sm: 18px;
+    --fs-xs: 16px;
+
+    /* Font Weights */
+
+    --fw-bold: 700;
+    --fw-semibold: 600;
+    --fw-medium: 500;
+    --fw-regular: 400;
+
+    /* ================= SPACING ================= */
+
+    --container-width: 1300px;
+
+    --section-padding: 100px;
+
+    --gap-large: 60px;
+    --gap-medium: 40px;
+    --gap-small: 20px;
+
+    /* ================= BORDER RADIUS ================= */
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 30px;
+    --radius-round: 50%;
+
+    /* ================= SHADOWS ================= */
+
+    --shadow-card: 0 20px 45px rgba(2, 8, 23, 0.45);
+
+    --shadow-button: 0 12px 28px rgba(124, 58, 237, 0.35);
+
+    /* ================= TRANSITIONS ================= */
+
+    --transition: all 0.35s ease;
+
+}

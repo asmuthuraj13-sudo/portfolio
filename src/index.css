@@ -1,0 +1,116 @@
+/* Google Fonts are imported through @fontsource */
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 28%),
+        linear-gradient(135deg, var(--bg-color), #0f172a 70%, #111827);
+    color:var(--white);
+    font-family:var(--body-font);
+    overflow-x:hidden;
+    transition: background 0.4s ease;
+    cursor: none;
+
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.cursor-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22d3ee, #7c3aed);
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.85);
+}
+
+.cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 2px solid rgba(124, 58, 237, 0.95);
+    border-radius: 50%;
+    transition: width 0.18s ease, height 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.cursor-hover .cursor-ring {
+    width: 44px;
+    height: 44px;
+    border-color: rgba(34, 211, 238, 0.95);
+    transform: translate(-50%, -50%) scale(1.06);
+}
+
+a, button, .project-card, .certificate-card, .skill-card {
+    cursor: none;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+section{
+
+    width:90%;
+
+    max-width:var(--container-width);
+
+    margin:auto;
+
+    padding:var(--section-padding) 0;
+
+}
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+@media (max-width:768px){
+    .container{
+        width:95%;
+    }
+
+    .cursor-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .cursor-ring {
+        width: 28px;
+        height: 28px;
+    }
+}
