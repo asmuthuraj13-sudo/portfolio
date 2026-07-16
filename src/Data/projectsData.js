@@ -1,5 +1,8 @@
-import helpdesk from "../assets/projects/helpdesk.jpg";
-import bluetoothHearingAid from "../assets/projects/bluetooth_hearing_aid.png";
+// If you prefer importing images from `src/assets/projects/`,
+// place them there and import as above. Using public paths
+// avoids build-time resolution errors when files are missing.
+const helpdesk = "/assets/projects/image.png";
+const bluetoothHearingAid = "/assets/projects/bluetooth.jpg";
 
 const projects = [
   {

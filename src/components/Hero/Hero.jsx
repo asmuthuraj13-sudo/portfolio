@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Hero.css";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/profile.jpeg";
 import resume from "../../assets/Resume.pdf";
 
 import { motion, AnimatePresence } from "framer-motion";

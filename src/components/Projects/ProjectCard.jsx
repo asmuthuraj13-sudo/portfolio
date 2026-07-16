@@ -1,9 +1,12 @@
 import "./Projects.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 function ProjectCard({ project, index }) {
+  const [imageError, setImageError] = useState(false);
+  const imageSrc = imageError ? "/assets/projects/project-placeholder.svg" : project.image;
   return (
     <motion.div
       className="project-card"
@@ -20,10 +23,16 @@ function ProjectCard({ project, index }) {
       }}
     >
       <img
-        src={project.image}
+        src={imageSrc}
         alt={project.title}
         className="project-image"
+        onError={() => setImageError(true)}
       />
+      {imageError && (
+        <div className="project-image-message">
+          Image not available
+        </div>
+      )}
 
       <div className="project-content">
         <h3>{project.title}</h3>
