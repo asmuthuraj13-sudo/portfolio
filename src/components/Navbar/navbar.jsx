@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./navbar.css";
 import resume from "../../assets/Resume.pdf";
 
 function Navbar() {
