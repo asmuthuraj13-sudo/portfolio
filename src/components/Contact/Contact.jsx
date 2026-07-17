@@ -30,18 +30,32 @@ function Contact() {
     setStatus("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formspree.io/f/xlgqgypp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      // Safely handle JSON and non-JSON responses
+      const contentType = response.headers.get("content-type") || "";
+      let result = {};
+      if (contentType.includes("application/json")) {
+        result = await response.json().catch(() => ({}));
+      } else {
+        const text = await response.text().catch(() => "");
+        try {
+          result = text ? JSON.parse(text) : {};
+        } catch (e) {
+          result = { message: text };
+        }
+      }
 
       if (!response.ok) {
-        throw new Error(result.message || "Something went wrong");
+        const errorMessage = result.errors?.[0]?.message || result.message;
+        throw new Error(errorMessage || "Unable to send your message. Please try again.");
       }
 
       setStatus("Message sent successfully!");
