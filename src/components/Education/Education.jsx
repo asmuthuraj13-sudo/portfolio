@@ -1,5 +1,5 @@
 import "./Education.css";
-import education from "../../data/educationData";
+import education from "../../Data/educationData";
 
 import { motion } from "framer-motion";
 import {

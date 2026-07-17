@@ -1,5 +1,5 @@
 import "./Certificates.css";
-import certificates from "../../data/certificateData";
+import certificates from "../../Data/certificateData";
 import CertificateCard from "./CertificateCard";
 import { motion } from "framer-motion";
 

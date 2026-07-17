@@ -1,5 +1,5 @@
 import "./Experience.css";
-import experience from "../../data/experienceData";
+import experience from "../../Data/experienceData";
 import ExperienceCard from "./ExperienceCard";
 
 import { motion } from "framer-motion";

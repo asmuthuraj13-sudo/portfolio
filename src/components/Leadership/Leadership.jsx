@@ -1,6 +1,6 @@
 import "./Leadership.css";
 import LeadershipCard from "./LeadershipCard";
-import leadership from "../../data/leadershipData";
+import leadership from "../../Data/leadershipData";
 import { motion } from "framer-motion";
 
 function Leadership() {
