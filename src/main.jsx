@@ -7,7 +7,7 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 
-import "./styles/variables.css";
+import "./Styles/variables.css";
 import "./index.css";
 
 import React from "react";
